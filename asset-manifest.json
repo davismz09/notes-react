@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Notes-react/static/css/main.83101583.css",
+    "main.js": "/Notes-react/static/js/main.2d9f3f49.js",
+    "static/js/787.1b93169a.chunk.js": "/Notes-react/static/js/787.1b93169a.chunk.js",
+    "index.html": "/Notes-react/index.html",
+    "main.83101583.css.map": "/Notes-react/static/css/main.83101583.css.map",
+    "main.2d9f3f49.js.map": "/Notes-react/static/js/main.2d9f3f49.js.map",
+    "787.1b93169a.chunk.js.map": "/Notes-react/static/js/787.1b93169a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83101583.css",
+    "static/js/main.2d9f3f49.js"
+  ]
+}
