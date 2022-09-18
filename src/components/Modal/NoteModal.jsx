@@ -9,7 +9,7 @@ export const NoteModal = ({ closeModal, note }) => {
   const { editNote, notes } = useContext(NoteContext);
 
   const isValid = () => {
-    return title !== "" && description !== "";
+    return title !== "" || description !== "";
   };
   let isValido = true;
 
