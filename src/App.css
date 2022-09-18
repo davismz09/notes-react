@@ -5,5 +5,13 @@
     min-height: calc(100% - 50px);
     padding-bottom: 60px;
     align-content: flex-start;
+}
 
+@media (max-width: 768px) {
+    .main__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+        padding-bottom: 80px;
+    }
 }

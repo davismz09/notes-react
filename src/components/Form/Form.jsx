@@ -22,6 +22,7 @@ function Form() {
     e.preventDefault();
     if (isValid()) {
       addNote({ title, description });
+
       reset();
       return;
     }
@@ -36,8 +37,8 @@ function Form() {
         id='input'
         className='notes__text notes__input'
         placeholder='Título'
-        value={title}
         onChange={(e) => setTitle(e.target.value)}
+        value={title}
       />
       <textarea
         id='textArea'
@@ -45,10 +46,10 @@ function Form() {
         className='notes__text notes__textArea'
         cols='50'
         rows='10'
-        value={description}
         placeholder='Nota'
         autoCapitalize='sentences'
         onChange={(e) => setDescription(e.target.value)}
+        value={description}
       ></textarea>
       <button id='button' className='notes__submit'>
         Guardar

@@ -14,12 +14,14 @@ function NoteList() {
           No se ha creado ninguna tarea
         </p>
       ) : (
-        notes.map(({ id, title, description }, index) => {
+        notes.map(({ title, description,id }, index) => {
+          let noteId = index;
+          console.log(id)
           return (
             <Note
               key={index}
               index={index}
-              id={id}
+              id={noteId}
               title={title}
               description={description}
             />
