@@ -57,7 +57,9 @@ export const NoteModal = ({ closeModal, note }) => {
             return;
           }
           isValido = false;
-          alert("No puede la con los campos vacíos");
+          alert(
+            "La nota no ha sido editada. Si no desea editarla, puede darle a la 'X' de arriba",
+          );
         }}
       >
         Guardar nota
