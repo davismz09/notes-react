@@ -14,9 +14,8 @@ function NoteList() {
           No se ha creado ninguna tarea
         </p>
       ) : (
-        notes.map(({ title, description,id }, index) => {
+        notes.map(({ title, description, id }, index) => {
           let noteId = index;
-          console.log(id)
           return (
             <Note
               key={index}

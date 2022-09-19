@@ -1,28 +1,35 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 export const NoteContext = createContext();
 
 export function NoteContextProvider({ children }) {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(
+    () => JSON.parse(window.localStorage.getItem("Notes")) ?? [],
+  );
 
-  function addNote(noteAdd) {
-    setNotes([
-      ...notes.map((note, index) => {
-        return {
-          ...note,
-          id: index,
-        };
-      }),
-      {
-        id: notes.length,
-        title: noteAdd.title,
-        description: noteAdd.description,
-      },
-    ]);
-  }
+  const saveNotes = () => {
+    window.localStorage.setItem("Notes", JSON.stringify(notes));
+  };
+
+  useEffect(() => {
+    saveNotes();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notes.length]);
+
+  const addNote = (noteAdd) => {
+    setNotes((prevNotes) => {
+      return [
+        ...prevNotes,
+        {
+          id: prevNotes.length,
+          title: noteAdd.title,
+          description: noteAdd.description,
+        },
+      ];
+    });
+  };
 
   const deleteNote = (noteId) => {
     notes.splice(noteId, 1);
-
     setNotes([
       ...notes.map((note, index) => {
         return {
@@ -46,6 +53,7 @@ export function NoteContextProvider({ children }) {
         return { ...note };
       }),
     );
+    saveNotes();
   };
   return (
     <NoteContext.Provider
