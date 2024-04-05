@@ -1,12 +1,13 @@
-import { useState, useContext } from "react";
-import { NoteContext } from "../../context/NoteContext.jsx";
+/* eslint-disable react/prop-types */
+import {useState, useContext} from "react";
+import {NoteContext} from "../../context/note-context.jsx";
 
-export const NoteModal = ({ closeModal, note }) => {
+export const NoteModal = ({closeModal, note}) => {
   const [title, setTitle] = useState("");
 
   const [description, setDescription] = useState("");
 
-  const { editNote, notes } = useContext(NoteContext);
+  const {editNote, notes} = useContext(NoteContext);
 
   const isValid = () => {
     return title !== "" || description !== "";
@@ -46,8 +47,7 @@ export const NoteModal = ({ closeModal, note }) => {
         onChange={(e) => {
           notes[note.id].description = e.target.value;
           setDescription(notes[note.id].description);
-        }}
-      ></textarea>
+        }}></textarea>
       <button
         className='max-w-max shadow-lg  hover:bg-green-600 p-1 rounded-md hover:text-white'
         onClick={() => {
@@ -60,8 +60,7 @@ export const NoteModal = ({ closeModal, note }) => {
           alert(
             "La nota no ha sido editada. Si no desea editarla, puede darle a la 'X' de arriba",
           );
-        }}
-      >
+        }}>
         Guardar nota
       </button>
     </form>

@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Aplicación de Notas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Bienvenido a la Aplicación de Notas!
 
-## Available Scripts
+Esta aplicación te permite crear, editar y eliminar notas de manera sencilla. Puedes registrar tus pensamientos, tareas pendientes o cualquier otra información importante.
 
-In the project directory, you can run:
+## Características
 
-### `npm start`
+- **Registro de Notas:** Crea nuevas notas con un título y una descripción.
+- **Edición de Notas:** Edita el contenido de las notas existentes según sea necesario.
+- **Eliminación de Notas:** Elimina las notas que ya no necesitas.
+- **Interfaz Intuitiva:** Utiliza una interfaz de usuario simple y amigable para una experiencia sin complicaciones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El proyecto está organizado en diferentes componentes:
 
-### `npm test`
+- **Header:** Encabezado de la aplicación que muestra el título y el logotipo.
+- **Footer:** Pie de página que contiene información sobre el autor y los derechos de autor.
+- **Form:** Formulario para agregar nuevas notas.
+- **NoteList:** Lista de notas que muestra todas las notas registradas.
+- **Note:** Componente individual de nota que permite ver, editar o eliminar una nota.
+- **Modal:** Componente modal utilizado para la edición de notas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contexto de Notas
 
-### `npm run build`
+El contexto de notas se utiliza para gestionar el estado de las notas en toda la aplicación. Se encarga de almacenar las notas en el almacenamiento local del navegador y proporciona funciones para agregar, editar y eliminar notas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Hooks Personalizados
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **useModal:** Hook personalizado para gestionar la apertura y cierre de modales.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Construyendo el Proyecto
 
-### `npm run eject`
+1. **Clona el Repositorio:** Clona este repositorio en tu máquina local.
+2. **Instala las Dependencias:** Ejecuta `npm install` para instalar todas las dependencias necesarias.
+3. **Inicia la Aplicación:** Ejecuta `npm start` para iniciar la aplicación en tu navegador.
+4. **Explora y Modifica:** Explora el código y modifica según sea necesario para cumplir con tus requisitos.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tecnologías Utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React:** Biblioteca de JavaScript para construir interfaces de usuario.
+- **LocalStorage:** Almacena las notas en el almacenamiento local del navegador para persistencia de datos.
+- **Tailwind CSS:** Utilizado para estilizar la aplicación y hacerla responsiva.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Autor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **James Loor** - Desarrollador Principal - [Perfil de GitHub](https://github.com/JamesLoor)
+- **David Mite** - Desarrollador de la Versión modificada inspirada en la principal - [Perfil de GitHub](https://github.com/davismz09)

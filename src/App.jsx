@@ -1,9 +1,8 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Form from "./components/Form/Form";
-import NoteList from "./components/NoteList/NoteList";
+import Header from "./components/pages/header.jsx";
+import Footer from "./components/pages/footer.jsx";
+import Form from "./components/form/form.jsx";
+import NoteList from "./components/note/note-list.jsx";
 
-import "./App.css";
 function App() {
   return (
     <div className='App'>

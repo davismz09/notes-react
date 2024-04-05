@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { NoteContext } from "../../context/NoteContext";
+import {useState, useContext} from "react";
+import {NoteContext} from "../../context/note-context";
 
 import "./style.css";
 
@@ -7,7 +7,7 @@ function Form() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const { addNote } = useContext(NoteContext);
+  const {addNote} = useContext(NoteContext);
 
   const reset = () => {
     setTitle("");
@@ -21,7 +21,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isValid()) {
-      addNote({ title, description });
+      addNote({title, description});
 
       reset();
       return;
@@ -49,8 +49,7 @@ function Form() {
         placeholder='Nota'
         autoCapitalize='sentences'
         onChange={(e) => setDescription(e.target.value)}
-        value={description}
-      ></textarea>
+        value={description}></textarea>
       <button id='button' className='notes__submit'>
         Guardar
       </button>

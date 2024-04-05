@@ -1,7 +1,9 @@
-import { createContext, useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
+import {createContext, useState, useEffect} from "react";
 export const NoteContext = createContext();
 
-export function NoteContextProvider({ children }) {
+export function NoteContextProvider({children}) {
   const [notes, setNotes] = useState(
     () => JSON.parse(window.localStorage.getItem("Notes")) ?? [],
   );
@@ -12,7 +14,6 @@ export function NoteContextProvider({ children }) {
 
   useEffect(() => {
     saveNotes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [notes.length]);
 
   const addNote = (noteAdd) => {
@@ -50,7 +51,7 @@ export function NoteContextProvider({ children }) {
             description: noteEdit.description,
           };
         }
-        return { ...note };
+        return {...note};
       }),
     );
     saveNotes();
@@ -62,8 +63,7 @@ export function NoteContextProvider({ children }) {
         addNote,
         editNote,
         deleteNote,
-      }}
-    >
+      }}>
       {children}
     </NoteContext.Provider>
   );

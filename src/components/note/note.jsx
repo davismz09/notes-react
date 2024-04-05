@@ -1,15 +1,16 @@
-import React, { useContext } from "react";
-import { NoteContext } from "../../context/NoteContext.jsx";
+import {useContext} from "react";
+import {NoteContext} from "../../context/note-context.jsx";
 import "./style.css";
 
-import { Modal } from "../Modal/Modal.jsx";
-import { NoteModal } from "../Modal/NoteModal.jsx";
-import { useModal } from "../../hooks/useModal.js";
+import {Modal} from "../form/modal.jsx";
+import {NoteModal} from "../form/note-modal.jsx";
+import {useModal} from "../../hooks/use-modal.js";
 
-function Note({ id, title, description }) {
-  const { deleteNote } = useContext(NoteContext);
+// eslint-disable-next-line react/prop-types
+function Note({id, title, description}) {
+  const {deleteNote} = useContext(NoteContext);
 
-  const { isOpen, openModal, closeModal } = useModal(false);
+  const {isOpen, openModal, closeModal} = useModal(false);
 
   return (
     <article className='note'>
@@ -22,8 +23,7 @@ function Note({ id, title, description }) {
         type='submit'
         onClick={() => {
           deleteNote(id);
-        }}
-      >
+        }}>
         Eliminar
       </button>
       <button
@@ -31,13 +31,12 @@ function Note({ id, title, description }) {
         type='button'
         onClick={() => {
           openModal();
-        }}
-      >
+        }}>
         Editar
       </button>
 
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <NoteModal closeModal={closeModal} note={{ title, description, id }} />
+        <NoteModal closeModal={closeModal} note={{title, description, id}} />
       </Modal>
     </article>
   );

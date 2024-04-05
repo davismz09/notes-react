@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import {useContext} from "react";
+import {NoteContext} from "../../context/note-context.jsx";
+import Note from "./note.jsx";
 import "./style.css";
 
-import { NoteContext } from "../../context/NoteContext";
-import Note from "../Note/Note";
-
 function NoteList() {
-  const { notes } = useContext(NoteContext);
+  const {notes} = useContext(NoteContext);
   return (
     <section id='section' className='notes__save'>
       <h2 className='notes__save-title'>Lista de notas</h2>
@@ -14,7 +13,7 @@ function NoteList() {
           No se ha creado ninguna tarea
         </p>
       ) : (
-        notes.map(({ title, description, id }, index) => {
+        notes.map(({title, description}, index) => {
           let noteId = index;
           return (
             <Note
